@@ -1,0 +1,5 @@
+# INFOMAN1 — Week 5 Lab Reflection
+
+SELECT statements are safe to run while exploring a database because they only retrieve data and do not directly change the database structure or stored records. This is different from DDL statements, which can change the structure of a database, and DML statements, which can modify the data itself. Using SELECT with FROM and WHERE also makes it possible to retrieve only the information needed from a table.
+
+For Task 4, I introduced a missing closing quotation mark in the string condition. The correct query was `SELECT name FROM Pet WHERE species = 'Cat';`, while the broken query was `SELECT name FROM Pet WHERE species = 'Cat;`. When I ran the incorrect query, MySQL treated the statement as an unfinished string instead of executing it normally. The prompt indicated that MySQL was still waiting for the string to be closed. I diagnosed the problem by comparing the working and broken queries and noticing that the closing quotation mark was missing. The unfinished statement could then be cancelled before returning to the normal MySQL prompt.
