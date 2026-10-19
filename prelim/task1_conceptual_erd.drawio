@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="draw.io">
+  <diagram id="Conceptual_ERD" name="Task 1 - Conceptual ERD">
+    <mxGraphModel dx="1016" dy="1141" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="member" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="MEMBER" vertex="1">
+          <mxGeometry height="130" width="180" x="80" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="m_id" parent="member" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;member_id&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m_name" parent="member" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="name" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="m_phone" parent="member" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="phone_number" vertex="1">
+          <mxGeometry height="25" width="180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m_date" parent="member" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="membership_start_date" vertex="1">
+          <mxGeometry height="25" width="180" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="tool" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="TOOL" vertex="1">
+          <mxGeometry height="130" width="180" x="520" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="t_id" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;tool_id&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_name" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="name" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t_cat" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="category" vertex="1">
+          <mxGeometry height="25" width="180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t_date" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="purchase_date" vertex="1">
+          <mxGeometry height="25" width="180" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="location" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="STORAGE LOCATION" vertex="1">
+          <mxGeometry height="80" width="180" x="880" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="l_code" parent="location" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;location_code&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l_desc" parent="location" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="description" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="certification" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="CERTIFICATION" vertex="1">
+          <mxGeometry height="80" width="180" x="300" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="c_id" parent="certification" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;certification_id&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_name" parent="certification" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="certification_name" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_borrows" edge="1" parent="1" source="member" style="endArrow=ERmany;html=1;endFill=0;startArrow=ERmany;startFill=0;strokeWidth=2;" target="tool" value="borrows&#xa;(borrow_date, return_date)">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_holds" edge="1" parent="1" source="location" style="endArrow=ERmany;html=1;endFill=0;startArrow=ERmandOne;startFill=0;strokeWidth=2;" target="tool" value="holds">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_completes" edge="1" parent="1" source="member" style="endArrow=ERmany;html=1;endFill=0;startArrow=ERmany;startFill=0;strokeWidth=2;" target="certification" value="completes&#xa;(completion_date)">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_requires" edge="1" parent="1" source="tool" style="endArrow=ERmany;html=1;endFill=0;startArrow=ERmany;startFill=0;strokeWidth=2;" target="certification" value="requires">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
