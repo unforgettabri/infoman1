@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" agent="draw.io">
+  <diagram id="Logical_ERD" name="Task 2 - Logical ERD">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- MEMBER Entity -->
+        <mxCell id="member" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="MEMBER" vertex="1">
+          <mxGeometry height="130" width="180" x="60" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m_id" parent="member" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;member_id&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m_name" parent="member" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="name" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="m_phone" parent="member" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="phone_number" vertex="1">
+          <mxGeometry height="25" width="180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m_date" parent="member" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="membership_start_date" vertex="1">
+          <mxGeometry height="25" width="180" y="105" as="geometry" />
+        </mxCell>
+
+        <!-- STORAGE LOCATION Entity -->
+        <mxCell id="location" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="STORAGE LOCATION" vertex="1">
+          <mxGeometry height="80" width="180" x="900" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l_code" parent="location" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;location_code&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l_desc" parent="location" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="description" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+
+        <!-- TOOL Entity -->
+        <mxCell id="tool" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="TOOL" vertex="1">
+          <mxGeometry height="155" width="180" x="500" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t_id" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;tool_id&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_name" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="name" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t_cat" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="category" vertex="1">
+          <mxGeometry height="25" width="180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t_date" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="purchase_date" vertex="1">
+          <mxGeometry height="25" width="180" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="t_loc" parent="tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="location_code (FK)" vertex="1">
+          <mxGeometry height="25" width="180" y="130" as="geometry" />
+        </mxCell>
+
+        <!-- CERTIFICATION Entity -->
+        <mxCell id="certification" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="CERTIFICATION" vertex="1">
+          <mxGeometry height="80" width="180" x="280" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="c_id" parent="certification" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;certification_id&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_name" parent="certification" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="certification_name" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+
+        <!-- JUNCTION ENTITY: BORROWING -->
+        <mxCell id="borrowing" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" value="BORROWING" vertex="1">
+          <mxGeometry height="130" width="180" x="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_mid" parent="borrowing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;member_id&lt;/u&gt; (PK, FK)" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_tid" parent="borrowing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;tool_id&lt;/u&gt; (PK, FK)" vertex="1">
+          <mxGeometry height="25" width="180" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="b_bdate" parent="borrowing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontStyle=1;" value="&lt;u&gt;borrow_date&lt;/u&gt; (PK)" vertex="1">
+          <mxGeometry height="25" width="180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_rdate" parent="borrowing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;" value="return_date" vertex="1">
+          <mxGeometry
