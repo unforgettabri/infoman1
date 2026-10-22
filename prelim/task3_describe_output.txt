@@ -1,0 +1,70 @@
+mysql> DESCRIBE Member;
++-----------------------+--------------+------+-----+---------+----------------+
+| Field                 | Type         | Null | Key | Default | Extra          |
++-----------------------+--------------+------+-----+---------+----------------+
+| member_id             | int          | NO   | PRI | NULL    | auto_increment |
+| name                  | varchar(100) | NO   |     | NULL    |                |
+| phone_number          | varchar(20)  | NO   |     | NULL    |                |
+| membership_start_date | date         | NO   |     | NULL    |                |
++-----------------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+mysql> DESCRIBE StorageLocation;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| location_code | varchar(20)  | NO   | PRI | NULL    |       |
+| description   | varchar(255) | NO   |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> DESCRIBE Tool;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| tool_id       | int          | NO   | PRI | NULL    | auto_increment |
+| name          | varchar(100) | NO   |     | NULL    |                |
+| category      | varchar(50)  | NO   |     | NULL    |                |
+| purchase_date | date         | NO   |     | NULL    |                |
+| location_code | varchar(20)  | NO   | MUL | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> DESCRIBE Certification;
++--------------------+--------------+------+-----+---------+----------------+
+| Field              | Type         | Null | Key | Default | Extra          |
++--------------------+--------------+------+-----+---------+----------------+
+| certification_id   | int          | NO   | PRI | NULL    | auto_increment |
+| certification_name | varchar(100) | NO   | UNI | NULL    |                |
++--------------------+--------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> DESCRIBE Borrowing;
++-------------+------+------+-----+---------+-------+
+| Field       | Type | Null | Key | Default | Extra |
++-------------+------+------+-----+---------+-------+
+| member_id   | int  | NO   | PRI | NULL    |       |
+| tool_id     | int  | NO   | PRI | NULL    |       |
+| borrow_date | date | NO   | PRI | NULL    |       |
+| return_date | date | YES  |     | NULL    |       |
++-------------+------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> DESCRIBE MemberCertification;
++------------------+------+------+-----+---------+-------+
+| Field            | Type | Null | Key | Default | Extra |
++------------------+------+------+-----+---------+-------+
+| member_id        | int  | NO   | PRI | NULL    |       |
+| certification_id | int  | NO   | PRI | NULL    |       |
+| completion_date  | date | NO   |     | NULL    |       |
++------------------+------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> DESCRIBE ToolCertification;
++------------------+------+------+-----+---------+-------+
+| Field            | Type | Null | Key | Default | Extra |
++------------------+------+------+-----+---------+-------+
+| tool_id          | int  | NO   | PRI | NULL    |       |
+| certification_id | int  | NO   | PRI | NULL    |       |
++------------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
