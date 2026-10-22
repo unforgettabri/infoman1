@@ -1,6 +1,3 @@
--- INFOMAN1 Prelim Lab Exam - Task 3: MySQL DDL Implementation
--- Database: toolshare_prelim
-
 CREATE DATABASE IF NOT EXISTS toolshare_prelim;
 USE toolshare_prelim;
 
@@ -77,11 +74,3 @@ CREATE TABLE ToolCertification (
         REFERENCES Certification(certification_id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
-
--- =========================================================
--- Data Type Justifications (Task 3 Requirement):
--- 1. return_date (DATE NULL): Using a nullable DATE column explicitly models
---    active/ongoing loans where NULL signifies that the tool has not been returned.
--- 2. location_code (VARCHAR(20)): Selected over an auto-increment integer because
---    physical storage codes use alphanumeric identifiers (e.g., 'Shelf A3', 'Pegboard B1').
--- =========================================================
