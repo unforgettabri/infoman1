@@ -1,0 +1,33 @@
+student_name	program	order_id	order_date
+Ana Cruz	BSIT	101	2026-08-10
+Ana Cruz	BSIT	102	2026-08-15
+Dan Reyes	BSIT	103	2026-08-16
+student_name	program	order_id	order_date
+Ana Cruz	BSIT	101	2026-08-10
+Ana Cruz	BSIT	102	2026-08-15
+Ben Lim	BSCS	NULL	NULL
+Cara Yu	BSIS	NULL	NULL
+Dan Reyes	BSIT	103	2026-08-16
+student_name	program	order_id
+Ben Lim	BSCS	NULL
+Cara Yu	BSIS	NULL
+student_name	program	order_id	item_name	quantity	price	line_total
+Ana Cruz	BSIT	101	Iced Tea	1	30.00	30.00
+Ana Cruz	BSIT	101	Siomai Rice	2	65.00	130.00
+Ana Cruz	BSIT	102	Burger Steak	1	89.00	89.00
+Dan Reyes	BSIT	103	Siomai Rice	1	65.00	65.00
+student_name	item_name	line_total
+Dan Reyes	Siomai Rice	65.00
+Ana Cruz	Burger Steak	89.00
+Ana Cruz	Siomai Rice	130.00
+Ana Cruz	Iced Tea	30.00
+Ben Lim	NULL	NULL
+Cara Yu	NULL	NULL
+student_name	item_name	line_total
+Dan Reyes	Siomai Rice	65.00
+Ana Cruz	Burger Steak	89.00
+Ana Cruz	Siomai Rice	130.00
+Ana Cruz	Iced Tea	30.00
+report_version	row_count
+LEFT JOIN with date condition in ON	6
+LEFT JOIN with date condition in WHERE	4
