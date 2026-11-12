@@ -1,0 +1,34 @@
+section
+TASK 1A: UPDATE ANOMALY
+dept_id	department_name	affected_rows
+D01	Computing Studies	3
+student_id	course_id	department_name
+101	IT101	Computing Studies
+102	IT101	Computing Studies
+101	IT102	Computing Studies
+section
+TASK 1B: INSERT ANOMALY
+proposed_course_id	proposed_course_title	proposed_dept_id	problem
+IT103	Intro to Networks	D01	No student enrollment exists
+section
+TASK 1C: DELETE ANOMALY
+student_id	student_name	course_id	course_title	dept_id	department_name
+101	Ana Cruz	IT102	Web Development	D01	Computing Studies
+section
+TASK 2: FIRST NORMAL FORM
+enrollment_row_id	student_id	student_name	course_id	course_title	dept_id	department_name	grade
+1	101	Ana Cruz	IT101	Database Systems	D01	Computing Studies	1.50
+3	101	Ana Cruz	IT102	Web Development	D01	Computing Studies	1.25
+2	102	Ben Lim	IT101	Database Systems	D01	Computing Studies	1.75
+section
+TASK 3: SECOND NORMAL FORM
+student_id	student_name	course_id	course_title	department_name	grade
+101	Ana Cruz	IT101	Database Systems	Computing Studies	1.50
+101	Ana Cruz	IT102	Web Development	Computing Studies	1.25
+102	Ben Lim	IT101	Database Systems	Computing Studies	1.75
+section
+TASK 4: THIRD NORMAL FORM
+student_id	student_name	course_id	course_title	department_name	grade
+101	Ana Cruz	IT101	Database Systems	Computing Studies	1.50
+101	Ana Cruz	IT102	Web Development	Computing Studies	1.25
+102	Ben Lim	IT101	Database Systems	Computing Studies	1.75
