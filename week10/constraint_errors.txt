@@ -1,0 +1,13 @@
+Expected rejected writes from MySQL 8.4:
+
+1. NOT NULL violation:
+ERROR 1048 (23000): Column 'product_name' cannot be null
+
+2. UNIQUE violation:
+ERROR 1062 (23000): Duplicate entry 'NB-001' for key 'products.uq_products_sku'
+
+3. CHECK violation:
+ERROR 3819 (HY000): Check constraint 'chk_products_price' is violated.
+
+4. Task 1 duplicate Calculator SKU:
+ERROR 1062 (23000): Duplicate entry 'CALC-SCI-001' for key 'products.uq_products_sku'

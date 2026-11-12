@@ -1,0 +1,28 @@
+product_id	product_name	sku	price	stock_quantity	status	contact_number
+6	Scientific Calculator	CALC-SCI-001	875.00	20	Active	NULL
+7	Compass	CMP-001	120.00	50	Active	NULL
+product_id	product_name	sku	price	stock_quantity	status	contact_number
+6	Scientific Calculator	CALC-SCI-001	875.00	20	Active	NULL
+employee	manager
+Lea Ramos	NULL
+Carlo Reyes	Lea Ramos
+Dana Cruz	Lea Ramos
+color_name	size_name
+Blue	L
+Blue	M
+Blue	S
+Green	L
+Green	M
+Green	S
+Red	L
+Red	M
+Red	S
+total_combinations
+9
+Table	Create Table
+products	CREATE TABLE `products` (\n  `product_id` int NOT NULL AUTO_INCREMENT,\n  `product_name` varchar(100) NOT NULL,\n  `sku` varchar(30) DEFAULT NULL,\n  `price` decimal(10,2) DEFAULT NULL,\n  `stock_quantity` int DEFAULT NULL,\n  `status` varchar(20) DEFAULT 'Active',\n  `contact_number` varchar(20) DEFAULT NULL,\n  PRIMARY KEY (`product_id`),\n  UNIQUE KEY `uq_products_sku` (`sku`),\n  CONSTRAINT `chk_products_price` CHECK ((`price` > 0))\n) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+product_name	sku	price	status
+NOT NULL Test	TEST-NN-001	1.00	Active
+UNIQUE Test	TEST-UNQ-001	1.00	Active
+CHECK Test	TEST-CHK-001	10.00	Active
+DEFAULT Test	TEST-DEF-001	5.00	Active
